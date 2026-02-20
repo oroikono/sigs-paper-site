@@ -20,7 +20,7 @@ export const title =
 
 export const subtitle = "SIGS · Interactive companion";
 
-export const venue = " · ICML";
+export const venue = " · ";
 
 /**
  * TL;DR bullets — quoted/paraphrased directly from the abstract & intro.
@@ -70,12 +70,11 @@ export const logos = [
 
 // ── BIBTEX ──────────────────────────────────────────────────────────────────
 
-export const bibtex = `@inproceedings{anonymous2025sigs,
-  title     = {Neuro-Symbolic {AI} for Analytical Solutions of Differential Equations},
-  author    = {Anonymous},
-  booktitle = {Proceedings of the 42nd International Conference on Machine Learning (ICML)},
-  year      = {2025},
-  note      = {},
+export const bibtex = `@article{oikonomou2025neuro,
+  title={Neuro-symbolic AI for analytical solutions of differential equations},
+  author={Oikonomou, Orestis and Lingsch, Levi and Grund, Dana and Mishra, Siddhartha and Kissas, Georgios},
+  journal={arXiv preprint arXiv:2502.01476},
+  year={2025}
 }`;
 
 // ── METHOD STEPS A–D ────────────────────────────────────────────────────────
