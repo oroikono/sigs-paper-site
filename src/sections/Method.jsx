@@ -2,6 +2,8 @@ import React, { useState, useEffect, useCallback } from "react";
 import { METHOD_STEPS } from "../siteContent.js";
 import MiniFlow from "../components/MiniFlow.jsx";
 
+const BASE = import.meta.env.BASE_URL;
+
 export default function Method() {
   const [activeIdx, setActiveIdx] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -44,7 +46,7 @@ export default function Method() {
         </div>
 
         <div className="method-fig-wrap">
-          <img src="/assets/fig1.png" alt="SIGS pipeline overview — Figure 1" />
+          <img src={`${BASE}assets/fig1.png`} alt="SIGS pipeline overview — Figure 1" />
           {step.highlight && (
             <div
               className="fig-overlay-rect"

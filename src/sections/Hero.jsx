@@ -2,6 +2,8 @@ import React from "react";
 import { anonymous, SITE, AUTHORS, AFFILIATIONS, LOGOS } from "../siteContent.js";
 import GitHubIcon from "../components/GitHubIcon.jsx";
 
+const BASE = import.meta.env.BASE_URL;
+
 export default function Hero() {
   const { title, subtitle, noticeLine, venue, links } = SITE;
   return (
@@ -38,7 +40,7 @@ export default function Hero() {
               {LOGOS.map((l, i) => (
                 <a key={i} href={l.href} target="_blank" rel="noreferrer">
                   <img
-                    src={l.src}
+                    src={BASE + l.src.replace(/^\//, "")}
                     alt={l.alt}
                     onError={e => { e.currentTarget.style.display = "none"; }}
                   />
@@ -53,9 +55,9 @@ export default function Hero() {
         <a className="btn-primary" href={links.paperPdf} target="_blank" rel="noreferrer">
           📄 Paper
         </a>
-        <a className="btn-secondary" href={links.codeRepo} target="_blank" rel="noreferrer">
-          <GitHubIcon /> Code
-        </a>
+        <span className="btn-secondary" style={{ opacity: 0.6, cursor: "default" }}>
+          <GitHubIcon /> {links.codeRepoLabel || "Code"}
+        </span>
       </div>
 
       <div className="hero-quick-links">

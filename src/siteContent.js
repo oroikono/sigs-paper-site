@@ -20,7 +20,8 @@ export const SITE = {
   venue: "Under Review · ICML 2025",
   links: {
     paperPdf: "/paper.pdf",
-    codeRepo: "https://github.com/REPLACE_ME/SIGS",
+    codeRepo: "#",
+    codeRepoLabel: "TBD after review",
   },
 };
 
@@ -205,9 +206,9 @@ export const RESULTS_HIGHLIGHTS = [
 ];
 
 // ── BIBTEX ────────────────────────────────────────────────────────────────────
-export const BIBTEX = `@article{oikonomou2026sigs,
-  title   = {Neuro-Symbolic {AI} for Analytical Solutions of Differential Equations},
+export const BIBTEX = `@article{oikonomou2025neuro,
+  title   = {Neuro-symbolic {AI} for analytical solutions of differential equations},
   author  = {Oikonomou, Orestis and Lingsch, Levi and Grund, Dana and Mishra, Siddhartha and Kissas, Georgios},
-  year    = {2026},
-  note    = {Manuscript under review}
+  journal = {arXiv preprint arXiv:2502.01476},
+  year    = {2025}
 }`;

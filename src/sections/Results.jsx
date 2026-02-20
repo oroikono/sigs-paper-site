@@ -5,8 +5,10 @@ import PlotPanel from "../components/PlotPanel.jsx";
 import MetricTable from "../components/MetricTable.jsx";
 import BaselineTable from "../components/BaselineTable.jsx";
 
+const BASE = import.meta.env.BASE_URL;
+
 async function fetchJSON(path) {
-  const r = await fetch(path);
+  const r = await fetch(BASE + path.replace(/^\//, ""));
   if (!r.ok) throw new Error(`Failed to load ${path}`);
   return r.json();
 }
@@ -167,7 +169,7 @@ export default function Results() {
                 {hasFigure && (
                   <div className="demo-card result-figure-card">
                     <img
-                      src={problem.figure}
+                      src={BASE + problem.figure.replace(/^\//, "")}
                       alt={problem.figure_caption || problem.name}
                       className="result-figure"
                     />

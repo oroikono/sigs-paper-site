@@ -1,6 +1,8 @@
 import React from "react";
 import { anonymous, LOGOS } from "../siteContent.js";
 
+const BASE = import.meta.env.BASE_URL;
+
 export default function Footer() {
   return (
     <footer className="site-footer">
@@ -10,7 +12,7 @@ export default function Footer() {
             {LOGOS.map((l, i) => (
               <a key={i} href={l.href} target="_blank" rel="noreferrer">
                 <img
-                  src={l.src}
+                  src={BASE + l.src.replace(/^\//, "")}
                   alt={l.alt}
                   onError={e => { e.currentTarget.style.display = "none"; }}
                 />

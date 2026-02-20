@@ -11,7 +11,7 @@ export default function MethodOverview() {
   return (
     <div>
       <img
-        src="/assets/fig1.png"
+        src={`${import.meta.env.BASE_URL}assets/fig1.png`}
         alt="SIGS pipeline"
         style={{ width: "100%", borderRadius: "14px" }}
       />
