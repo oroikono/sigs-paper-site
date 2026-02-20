@@ -28,7 +28,7 @@ export const SITE = {
 
 // ── AUTHORS & AFFILIATIONS (public mode only) ─────────────────────────────────
 export const AUTHORS = [
-  { name: "Orestis Oikonomou", aff: [1, 2, 3], url: "https://orestis.ch/portfolio/" },
+  { name: "Orestis Oikonomou", aff: [1, 2, 3], url: "https://ai.ethz.ch/about-us/people.html" },
   { name: "Levi Lingsch",      aff: [1, 2, 3], url: "https://scholar.google.com/citations?user=9pJIGJUAAAAJ" },
   { name: "Dana Grund",        aff: [1, 4],    url: "https://camlab.ethz.ch/the-group/people.html" },
   { name: "Siddhartha Mishra", aff: [1, 2],    url: "https://math.ethz.ch/sam/the-institute/people/siddhartha-mishra.html" },
