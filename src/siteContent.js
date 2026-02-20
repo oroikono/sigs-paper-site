@@ -17,7 +17,7 @@ export const SITE = {
     "SIGS: grammar-constrained latent search that assembles, scores, and refines closed-form solutions by minimizing physics residuals.",
   noticeLine:
     "Interactive companion page (paper-style). Scroll for method → interactive results → citation.",
-  venue: "Under Review · ICML 2025",
+  venue: "Under Review · icml 2026",
   links: {
     paperPdf: "/paper.pdf",
     arxiv: "https://arxiv.org/abs/2502.01476",
@@ -29,10 +29,10 @@ export const SITE = {
 // ── AUTHORS & AFFILIATIONS (public mode only) ─────────────────────────────────
 export const AUTHORS = [
   { name: "Orestis Oikonomou", aff: [1, 2, 3], url: "https://ai.ethz.ch/about-us/people.html" },
-  { name: "Levi Lingsch",      aff: [1, 2, 3], url: "https://scholar.google.com/citations?user=9pJIGJUAAAAJ" },
-  { name: "Dana Grund",        aff: [1, 4],    url: "https://camlab.ethz.ch/the-group/people.html" },
-  { name: "Siddhartha Mishra", aff: [1, 2],    url: "https://math.ethz.ch/sam/the-institute/people/siddhartha-mishra.html" },
-  { name: "Georgios Kissas",   aff: [5],       url: "https://scholar.google.com/citations?user=gGvVfmAAAAAJ" },
+  { name: "Levi Lingsch", aff: [1, 2, 3], url: "https://scholar.google.com/citations?user=9pJIGJUAAAAJ" },
+  { name: "Dana Grund", aff: [1, 4], url: "https://camlab.ethz.ch/the-group/people.html" },
+  { name: "Siddhartha Mishra", aff: [1, 2], url: "https://math.ethz.ch/sam/the-institute/people/siddhartha-mishra.html" },
+  { name: "Georgios Kissas", aff: [5], url: "https://scholar.google.com/citations?user=gGvVfmAAAAAJ" },
 ];
 
 export const AFFILIATIONS = {
@@ -46,8 +46,8 @@ export const AFFILIATIONS = {
 // Logo images — show only when anonymous = false
 // Place PNG files in public/assets/; silently hidden if file missing.
 export const LOGOS = [
-  { src: "/assets/eth_ai_center.png", alt: "ETH AI Center",    href: "https://ai.ethz.ch" },
-  { src: "/assets/camlab.png",        alt: "CAMlab",           href: "https://camlab.ethz.ch" },
+  { src: "/assets/eth_ai_center.png", alt: "ETH AI Center", href: "https://ai.ethz.ch" },
+  { src: "/assets/camlab.png", alt: "CAMlab", href: "https://camlab.ethz.ch" },
 ];
 
 // ── TL;DR (3 bullets) ─────────────────────────────────────────────────────────
@@ -101,9 +101,9 @@ export const METHOD_STEPS = [
 
 // ── MINI-FLOW (3 nodes shown under the figure) ────────────────────────────────
 export const MINI_FLOW = [
-  { id: "grammar", label: "Grammar",          sub: "G → L(G)"  },
-  { id: "latent",  label: "Latent manifold",  sub: "GVAE / TGVAE" },
-  { id: "refine",  label: "Residual & refine", sub: "z* → u*"  },
+  { id: "grammar", label: "Grammar", sub: "G → L(G)" },
+  { id: "latent", label: "Latent manifold", sub: "GVAE / TGVAE" },
+  { id: "refine", label: "Residual & refine", sub: "z* → u*" },
 ];
 
 // ── BENCHMARKS (Tables 3–4 from the paper) ───────────────────────────────────
@@ -114,13 +114,13 @@ export const BENCHMARKS = [
     category: "Known analytical",
     note: "Relative L² error. SIGS reaches machine precision.",
     metrics: {
-      "SIGS":        "6.64×10⁻¹⁴",
-      "HD-TLGP P1":  "2.04%",
-      "HD-TLGP P2":  "35.68%",
-      "SSDE":        "45.62%",
-      "PINNs":       "6.09%",
-      "FBPINNs":     "28.26%",
-      "FEniCS":      "8.69×10⁻³%",
+      "SIGS": "6.64×10⁻¹⁴",
+      "HD-TLGP P1": "2.04%",
+      "HD-TLGP P2": "35.68%",
+      "SSDE": "45.62%",
+      "PINNs": "6.09%",
+      "FBPINNs": "28.26%",
+      "FEniCS": "8.69×10⁻³%",
     },
   },
   {
@@ -129,13 +129,13 @@ export const BENCHMARKS = [
     category: "Known analytical",
     note: "Relative L² error.",
     metrics: {
-      "SIGS":        "7.16×10⁻¹³",
-      "HD-TLGP P1":  "33.34%",
-      "HD-TLGP P2":  "79.73%",
-      "SSDE":        "5.87×10³%",
-      "PINNs":       "2.56%",
-      "FBPINNs":     "55.54%",
-      "FEniCS":      "2.26×10⁻³%",
+      "SIGS": "7.16×10⁻¹³",
+      "HD-TLGP P1": "33.34%",
+      "HD-TLGP P2": "79.73%",
+      "SSDE": "5.87×10³%",
+      "PINNs": "2.56%",
+      "FBPINNs": "55.54%",
+      "FEniCS": "2.26×10⁻³%",
     },
   },
   {
@@ -144,13 +144,13 @@ export const BENCHMARKS = [
     category: "Known analytical",
     note: "Relative L² error.",
     metrics: {
-      "SIGS":        "1.22×10⁻¹³",
-      "HD-TLGP P1":  "423.30%",
-      "HD-TLGP P2":  "178.77%",
-      "SSDE":        "1.19×10³%",
-      "PINNs":       "3.56%",
-      "FBPINNs":     "71.36%",
-      "FEniCS":      "2.28×10⁻²%",
+      "SIGS": "1.22×10⁻¹³",
+      "HD-TLGP P1": "423.30%",
+      "HD-TLGP P2": "178.77%",
+      "SSDE": "1.19×10³%",
+      "PINNs": "3.56%",
+      "FBPINNs": "71.36%",
+      "FEniCS": "2.28×10⁻²%",
     },
   },
   {
@@ -159,10 +159,10 @@ export const BENCHMARKS = [
     category: "Unknown (FEniCS reference)",
     note: "Relative L² error (%) vs FEniCS.",
     metrics: {
-      "SIGS":        "2.66%",
-      "HD-TLGP P1":  "200.9%",
-      "HD-TLGP P2":  "98.94%",
-      "SSDE":        "69.29%",
+      "SIGS": "2.66%",
+      "HD-TLGP P1": "200.9%",
+      "HD-TLGP P2": "98.94%",
+      "SSDE": "69.29%",
     },
   },
   {
@@ -171,10 +171,10 @@ export const BENCHMARKS = [
     category: "Unknown (FEniCS reference)",
     note: "Relative L² error (%) vs FEniCS.",
     metrics: {
-      "SIGS":        "1.54%",
-      "HD-TLGP P1":  "NaN",
-      "HD-TLGP P2":  "5.61×10⁷%",
-      "SSDE":        "69.64%",
+      "SIGS": "1.54%",
+      "HD-TLGP P1": "NaN",
+      "HD-TLGP P2": "5.61×10⁷%",
+      "SSDE": "69.64%",
     },
   },
   {
@@ -183,17 +183,17 @@ export const BENCHMARKS = [
     category: "Unknown (FEniCS reference)",
     note: "Relative L² error (%) vs FEniCS.",
     metrics: {
-      "SIGS":        "1.05%",
-      "HD-TLGP P1":  "NaN",
-      "HD-TLGP P2":  "5.45×10⁷%",
-      "SSDE":        "58.70%",
+      "SIGS": "1.05%",
+      "HD-TLGP P1": "NaN",
+      "HD-TLGP P2": "5.45×10⁷%",
+      "SSDE": "58.70%",
     },
   },
 ];
 
 // Columns per category
-export const KNOWN_COLS    = ["SIGS","HD-TLGP P1","HD-TLGP P2","SSDE","PINNs","FBPINNs","FEniCS"];
-export const UNKNOWN_COLS  = ["SIGS","HD-TLGP P1","HD-TLGP P2","SSDE"];
+export const KNOWN_COLS = ["SIGS", "HD-TLGP P1", "HD-TLGP P2", "SSDE", "PINNs", "FBPINNs", "FEniCS"];
+export const UNKNOWN_COLS = ["SIGS", "HD-TLGP P1", "HD-TLGP P2", "SSDE"];
 
 // ── RESULTS HIGHLIGHTS ────────────────────────────────────────────────────────
 export const RESULTS_HIGHLIGHTS = [
