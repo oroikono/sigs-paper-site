@@ -46,10 +46,8 @@ export const AFFILIATIONS = {
 // Logo images — show only when anonymous = false
 // Place PNG files in public/assets/; silently hidden if file missing.
 export const LOGOS = [
-  { src: "/assets/eth.png",           alt: "ETH Zürich",       href: "https://ethz.ch" },
   { src: "/assets/eth_ai_center.png", alt: "ETH AI Center",    href: "https://ai.ethz.ch" },
   { src: "/assets/camlab.png",        alt: "CAMlab",           href: "https://camlab.ethz.ch" },
-  { src: "/assets/ibm.png",           alt: "IBM Research",     href: "https://research.ibm.com/labs/zurich/" },
 ];
 
 // ── TL;DR (3 bullets) ─────────────────────────────────────────────────────────

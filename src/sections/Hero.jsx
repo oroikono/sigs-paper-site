@@ -55,9 +55,6 @@ export default function Hero() {
         <a className="btn-primary" href={links.arxiv} target="_blank" rel="noreferrer">
           📄 arXiv
         </a>
-        <a className="btn-secondary" href={links.paperPdf} target="_blank" rel="noreferrer">
-          PDF
-        </a>
         <span className="btn-secondary" style={{ opacity: 0.6, cursor: "default" }}>
           <GitHubIcon /> {links.codeRepoLabel || "Code"}
         </span>
