@@ -52,8 +52,11 @@ export default function Hero() {
       )}
 
       <div className="btn-row">
-        <a className="btn-primary" href={links.paperPdf} target="_blank" rel="noreferrer">
-          📄 Paper
+        <a className="btn-primary" href={links.arxiv} target="_blank" rel="noreferrer">
+          📄 arXiv
+        </a>
+        <a className="btn-secondary" href={links.paperPdf} target="_blank" rel="noreferrer">
+          PDF
         </a>
         <span className="btn-secondary" style={{ opacity: 0.6, cursor: "default" }}>
           <GitHubIcon /> {links.codeRepoLabel || "Code"}
@@ -61,7 +64,7 @@ export default function Hero() {
       </div>
 
       <div className="hero-quick-links">
-        <a href={links.paperPdf} target="_blank" rel="noreferrer">PDF ↗</a>
+        <a href={links.arxiv} target="_blank" rel="noreferrer">arXiv ↗</a>
         <a href="#abstract">Abstract</a>
         <a href="#method">Method</a>
         <a href="#results">Demo ↓</a>

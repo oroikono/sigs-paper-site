@@ -20,6 +20,7 @@ export const SITE = {
   venue: "Under Review · ICML 2025",
   links: {
     paperPdf: "/paper.pdf",
+    arxiv: "https://arxiv.org/abs/2502.01476",
     codeRepo: "#",
     codeRepoLabel: "TBD after review",
   },
