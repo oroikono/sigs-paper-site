@@ -1,0 +1,158 @@
+{
+  "id": "burgers",
+  "name": "Viscous Burgers' (1+1D)",
+  "known": true,
+  "pde_latex": "u_t + u\\,u_x - \\nu\\,u_{xx} = 0,\\quad \\nu = 0.01",
+  "domain_latex": "(x,t)\\in[-5,5]\\times[0,2],\\quad 128\\times128\\text{ grid}",
+  "ansatz_latex": "u(x,t) = a\\,\\psi(x,t)",
+  "solution_latex": "u_{\\text{SIGS}}(x,t) = 0.86 + 0.6\\tanh\\!\\bigl(30(x - 0.33 - 0.86\\,t)\\bigr)",
+  "true_latex": "u_{\\text{true}}(x,t) = 0.86 + 0.6\\tanh\\!\\bigl(25.8\\,t - 30\\,x + 9.9\\bigr)",
+  "figure": "/assets/burgers-1.png",
+  "figure_caption": "Space–time contour of the SIGS solution showing the traveling shock. SIGS recovers machine-precision accuracy.",
+  "metrics": {
+    "Rel. L² error": "6.64×10⁻¹⁴",
+    "Wall-clock (s)": 11.62
+  },
+  "baseline": [
+    {
+      "method": "SIGS",
+      "error": "6.64×10⁻¹⁴",
+      "time_sec": 11.62
+    },
+    {
+      "method": "HD-TLGP (P1)",
+      "error": "2.04%",
+      "time_sec": 14375.5
+    },
+    {
+      "method": "HD-TLGP (P2)",
+      "error": "35.68%",
+      "time_sec": 12057.2
+    },
+    {
+      "method": "SSDE",
+      "error": "45.62%",
+      "time_sec": 393.55
+    },
+    {
+      "method": "PINNs",
+      "error": "6.09%",
+      "time_sec": 8.82
+    },
+    {
+      "method": "FEniCS",
+      "error": "8.69×10⁻³%",
+      "time_sec": 2.18
+    }
+  ],
+  "plots": {
+    "type": "line",
+    "x": [
+      -5,
+      -4,
+      -3,
+      -2,
+      -1,
+      -0.5,
+      0,
+      0.5,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "t_slices": [
+      {
+        "t": 0.0,
+        "u": [
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          1.45996,
+          1.46,
+          1.46,
+          1.46,
+          1.46,
+          1.46
+        ]
+      },
+      {
+        "t": 0.5,
+        "u": [
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          1.46,
+          1.46,
+          1.46,
+          1.46,
+          1.46
+        ]
+      },
+      {
+        "t": 1.0,
+        "u": [
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          0.26001,
+          1.46,
+          1.46,
+          1.46,
+          1.46
+        ]
+      },
+      {
+        "t": 1.5,
+        "u": [
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          1.46,
+          1.46,
+          1.46,
+          1.46
+        ]
+      },
+      {
+        "t": 2.0,
+        "u": [
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          0.26,
+          0.31691,
+          1.46,
+          1.46,
+          1.46
+        ]
+      }
+    ]
+  }
+}

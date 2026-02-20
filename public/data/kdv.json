@@ -1,0 +1,144 @@
+{
+  "id": "kdv",
+  "name": "KdV — grammar misspecification (1+1D)",
+  "known": true,
+  "pde_latex": "u_t + 6u\\,u_x + u_{xxx} = 0",
+  "domain_latex": "(x,t)\\in[-10,10]\\times[0,1],\\quad 128^2\\text{ grid}\\text{ (soliton IC)}",
+  "ansatz_latex": "u(x,t) = \\sum_{k=0}^{2} a_k\\,\\psi_k(x,t)^k",
+  "solution_latex": "u_{\\text{SIGS}}(x,t) \\approx 2 - 2\\tanh^2(x - 4t)\\;[\\,\\equiv 2\\operatorname{sech}^2(x-4t)\\,]",
+  "true_latex": "u_{\\text{true}}(x,t) = \\frac{2}{\\cosh^2(x-4t)} = 2\\operatorname{sech}^2(x-4t)",
+  "note": "cosh/sech are excluded from the grammar. SIGS automatically uses the identity 2sech² = 2 − 2tanh² to recover an equivalent compact form.",
+  "figure": null,
+  "figure_caption": "",
+  "metrics": {
+    "Rel. L² error": "6.6×10⁻⁶",
+    "Wall-clock (s)": 36
+  },
+  "baseline": [
+    {
+      "method": "SIGS (tanh form)",
+      "error": "6.6×10⁻⁶",
+      "time_sec": 36
+    },
+    {
+      "method": "HD-TLGP",
+      "error": "DNF†",
+      "time_sec": ">3600"
+    },
+    {
+      "method": "SSDE",
+      "error": "DNF†",
+      "time_sec": ">3600"
+    }
+  ],
+  "plots": {
+    "type": "line",
+    "x": [
+      -10,
+      -8,
+      -6,
+      -4,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      4,
+      6,
+      8,
+      10
+    ],
+    "t_slices": [
+      {
+        "t": 0.0,
+        "u": [
+          0.0,
+          1e-06,
+          4.9e-05,
+          0.002682,
+          0.141302,
+          0.839949,
+          2.0,
+          0.839949,
+          0.141302,
+          0.002682,
+          4.9e-05,
+          1e-06,
+          0.0
+        ]
+      },
+      {
+        "t": 0.2,
+        "u": [
+          0.0,
+          0.0,
+          1e-05,
+          0.000542,
+          0.029365,
+          0.207117,
+          1.11811,
+          1.922086,
+          0.61004,
+          0.013248,
+          0.000243,
+          4e-06,
+          0.0
+        ]
+      },
+      {
+        "t": 0.5,
+        "u": [
+          0.0,
+          0.0,
+          1e-06,
+          4.9e-05,
+          0.002682,
+          0.019732,
+          0.141302,
+          0.839949,
+          2.0,
+          0.141302,
+          0.002682,
+          4.9e-05,
+          1e-06
+        ]
+      },
+      {
+        "t": 0.8,
+        "u": [
+          0.0,
+          0.0,
+          0.0,
+          4e-06,
+          0.000243,
+          0.001798,
+          0.013248,
+          0.095851,
+          0.61004,
+          1.11811,
+          0.029365,
+          0.000542,
+          1e-05
+        ]
+      },
+      {
+        "t": 1.0,
+        "u": [
+          0.0,
+          0.0,
+          0.0,
+          1e-06,
+          4.9e-05,
+          0.000363,
+          0.002682,
+          0.019732,
+          0.141302,
+          2.0,
+          0.141302,
+          0.002682,
+          4.9e-05
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "problems": [
+    { "id": "burgers",        "name": "Viscous Burgers' (1+1D)",                    "known": true  },
+    { "id": "diffusion",      "name": "Diffusion (1+1D)",                            "known": true  },
+    { "id": "damped_wave",    "name": "Damped Wave (2+1D)",                          "known": true  },
+    { "id": "kdv",            "name": "KdV — grammar misspecification (1+1D)",       "known": true  },
+    { "id": "poisson_gauss_2","name": "Poisson–Gauss PG-2 (2 sources, unknown soln.)", "known": false },
+    { "id": "poisson_gauss_3","name": "Poisson–Gauss PG-3 (3 sources, unknown soln.)", "known": false },
+    { "id": "poisson_gauss_4","name": "Poisson–Gauss PG-4 (4 sources, unknown soln.)", "known": false },
+    { "id": "swe",            "name": "Shallow Water Equations (2+1D system)",       "known": true  },
+    { "id": "euler",          "name": "Compressible Euler (2D steady, system)",      "known": true  }
+  ]
+}
