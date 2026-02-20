@@ -20,7 +20,7 @@ export const title =
 
 export const subtitle = "SIGS · Interactive companion";
 
-export const venue = "Under Review · ICML";
+export const venue = " · ICML";
 
 /**
  * TL;DR bullets — quoted/paraphrased directly from the abstract & intro.
@@ -75,7 +75,7 @@ export const bibtex = `@inproceedings{anonymous2025sigs,
   author    = {Anonymous},
   booktitle = {Proceedings of the 42nd International Conference on Machine Learning (ICML)},
   year      = {2025},
-  note      = {Under review},
+  note      = {},
 }`;
 
 // ── METHOD STEPS A–D ────────────────────────────────────────────────────────
