@@ -208,8 +208,8 @@ export const RESULTS_HIGHLIGHTS = [
 
 // ── BIBTEX ────────────────────────────────────────────────────────────────────
 export const BIBTEX = `@article{oikonomou2025neuro,
-  title   = {Neuro-symbolic {AI} for analytical solutions of differential equations},
-  author  = {Oikonomou, Orestis and Lingsch, Levi and Grund, Dana and Mishra, Siddhartha and Kissas, Georgios},
-  journal = {arXiv preprint arXiv:2502.01476},
-  year    = {2025}
+  title={Neuro-symbolic AI for analytical solutions of differential equations},
+  author={Oikonomou, Orestis and Lingsch, Levi and Grund, Dana and Mishra, Siddhartha and Kissas, Georgios},
+  journal={arXiv preprint arXiv:2502.01476},
+  year={2025}
 }`;
