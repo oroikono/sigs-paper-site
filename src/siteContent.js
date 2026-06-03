@@ -17,12 +17,14 @@ export const SITE = {
     "SIGS: grammar-constrained latent search that assembles, scores, and refines closed-form solutions by minimizing physics residuals.",
   noticeLine:
     "Interactive companion page (paper-style). Scroll for method → interactive results → citation.",
-  venue: " · ",
+  venue: "ICML 2026",
   links: {
     paperPdf: "/paper.pdf",
     arxiv: "https://arxiv.org/abs/2502.01476",
-    codeRepo: "#",
-    codeRepoLabel: "TBD after review",
+    icml: "https://icml.cc/virtual/2026/poster/63043",
+    codeRepo: "https://github.com/oroikono/SIGS",
+    codeRepoLabel: "Code",
+    video: "https://www.youtube.com/watch?v=a9MMvKVGhuQ",
   },
 };
 
@@ -206,8 +208,8 @@ export const RESULTS_HIGHLIGHTS = [
 
 // ── BIBTEX ────────────────────────────────────────────────────────────────────
 export const BIBTEX = `@article{oikonomou2025neuro,
-  title   = {Neuro-symbolic {AI} for analytical solutions of differential equations},
-  author  = {Oikonomou, Orestis and Lingsch, Levi and Grund, Dana and Mishra, Siddhartha and Kissas, Georgios},
-  journal = {arXiv preprint arXiv:2502.01476},
-  year    = {2025}
+  title={Neuro-symbolic AI for analytical solutions of differential equations},
+  author={Oikonomou, Orestis and Lingsch, Levi and Grund, Dana and Mishra, Siddhartha and Kissas, Georgios},
+  journal={arXiv preprint arXiv:2502.01476},
+  year={2025}
 }`;

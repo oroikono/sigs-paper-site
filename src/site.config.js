@@ -20,7 +20,7 @@ export const title =
 
 export const subtitle = "SIGS · Interactive companion";
 
-export const venue = " · ";
+export const venue = "ICML 2026";
 
 /**
  * TL;DR bullets — quoted/paraphrased directly from the abstract & intro.
@@ -43,7 +43,8 @@ SIGS is the first neuro-symbolic method to (i) analytically solve coupled system
 
 export const links = {
   paper: "/paper.pdf",
-  code: "https://github.com/anonymous/sigs", // replace with real URL for public mode
+  code: "https://github.com/oroikono/SIGS",
+  video: "https://www.youtube.com/watch?v=a9MMvKVGhuQ",
 };
 
 // ── AUTHORS / AFFILIATIONS (shown only when anonymous = false) ──────────────

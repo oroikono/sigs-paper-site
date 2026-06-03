@@ -8,7 +8,11 @@ export default function Hero() {
   const { title, subtitle, noticeLine, venue, links } = SITE;
   return (
     <section className="hero" id="overview">
-      <div className="hero-venue">{venue}</div>
+      <div className="hero-venue">
+        {links.icml
+          ? <a href={links.icml} target="_blank" rel="noreferrer">{venue}</a>
+          : venue}
+      </div>
 
       <h1 className="hero-title">{title}</h1>
       <p className="hero-subtitle">{subtitle}</p>
@@ -55,13 +59,20 @@ export default function Hero() {
         <a className="btn-primary" href={links.arxiv} target="_blank" rel="noreferrer">
           📄 arXiv
         </a>
-        <span className="btn-secondary" style={{ opacity: 0.6, cursor: "default" }}>
+        <a className="btn-secondary" href={links.codeRepo} target="_blank" rel="noreferrer">
           <GitHubIcon /> {links.codeRepoLabel || "Code"}
-        </span>
+        </a>
+        {links.video && (
+          <a className="btn-secondary" href={links.video} target="_blank" rel="noreferrer">
+            ▶ Video
+          </a>
+        )}
       </div>
 
       <div className="hero-quick-links">
         <a href={links.arxiv} target="_blank" rel="noreferrer">arXiv ↗</a>
+        {links.icml && <a href={links.icml} target="_blank" rel="noreferrer">ICML ↗</a>}
+        {links.video && <a href={links.video} target="_blank" rel="noreferrer">Video ↗</a>}
         <a href="#abstract">Abstract</a>
         <a href="#method">Method</a>
         <a href="#results">Demo ↓</a>
