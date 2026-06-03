@@ -8,7 +8,11 @@ export default function Hero() {
   const { title, subtitle, noticeLine, venue, links } = SITE;
   return (
     <section className="hero" id="overview">
-      <div className="hero-venue">{venue}</div>
+      <div className="hero-venue">
+        {links.icml
+          ? <a href={links.icml} target="_blank" rel="noreferrer">{venue}</a>
+          : venue}
+      </div>
 
       <h1 className="hero-title">{title}</h1>
       <p className="hero-subtitle">{subtitle}</p>
@@ -67,6 +71,7 @@ export default function Hero() {
 
       <div className="hero-quick-links">
         <a href={links.arxiv} target="_blank" rel="noreferrer">arXiv ↗</a>
+        {links.icml && <a href={links.icml} target="_blank" rel="noreferrer">ICML ↗</a>}
         {links.video && <a href={links.video} target="_blank" rel="noreferrer">Video ↗</a>}
         <a href="#abstract">Abstract</a>
         <a href="#method">Method</a>

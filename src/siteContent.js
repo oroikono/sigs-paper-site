@@ -21,6 +21,7 @@ export const SITE = {
   links: {
     paperPdf: "/paper.pdf",
     arxiv: "https://arxiv.org/abs/2502.01476",
+    icml: "https://icml.cc/virtual/2026/poster/63043",
     codeRepo: "https://github.com/oroikono/SIGS",
     codeRepoLabel: "Code",
     video: "https://www.youtube.com/watch?v=a9MMvKVGhuQ",
