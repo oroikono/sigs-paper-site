@@ -1,12 +1,12 @@
 /**
  * SIGS Paper Site — single source of truth for all content.
  * All text is grounded in the paper: "Neuro-Symbolic AI for Analytical
- * Solutions of Differential Equations" (reviewer copy, ICML submission).
+ * Solutions of Differential Equations" (ICML 2026).
  *
- * ANONYMOUS / PUBLIC MODE
- * -----------------------
- * Default: anonymous = true  (double-blind safe).
- * Override at build/dev time:  VITE_ANON=false npm run build
+ * PUBLIC MODE
+ * -----------
+ * Default: anonymous = false.
+ * Override at build/dev time:  VITE_ANON=true npm run build
  */
 const _defaultAnonymous = false;  // public mode — set VITE_ANON=true for double-blind
 const _envAnon = import.meta.env.VITE_ANON;
@@ -43,6 +43,8 @@ SIGS is the first neuro-symbolic method to (i) analytically solve coupled system
 
 export const links = {
   paper: "/paper.pdf",
+  arxiv: "https://arxiv.org/abs/2502.01476",
+  icml: "https://icml.cc/virtual/2026/poster/63043",
   code: "https://github.com/oroikono/SIGS",
   video: "https://www.youtube.com/watch?v=a9MMvKVGhuQ",
 };
@@ -50,16 +52,15 @@ export const links = {
 // ── AUTHORS / AFFILIATIONS (shown only when anonymous = false) ──────────────
 
 export const authors = [
-  { name: "Anonymous Author 1", affil: [1] },
-  { name: "Anonymous Author 2", affil: [1, 2] },
-  { name: "Anonymous Author 3", affil: [2] },
-  { name: "Anonymous Author 4", affil: [1, 3] },
+  { name: "Orestis Oikonomou", affil: [1] },
+  { name: "Levi Lingsch", affil: [1] },
+  { name: "Dana Grund", affil: [1] },
+  { name: "Siddhartha Mishra", affil: [1] },
+  { name: "Georgios Kissas", affil: [1] },
 ];
 
 export const affiliations = [
-  { id: 1, name: "Anonymous Institution" },
-  { id: 2, name: "Anonymous Research Lab" },
-  { id: 3, name: "Anonymous Institute" },
+  { id: 1, name: "ETH Zurich" },
 ];
 
 // ── LOGOS (shown only when anonymous = false) ───────────────────────────────
@@ -71,11 +72,15 @@ export const logos = [
 
 // ── BIBTEX ──────────────────────────────────────────────────────────────────
 
-export const bibtex = `@article{oikonomou2025neuro,
-  title={Neuro-symbolic AI for analytical solutions of differential equations},
-  author={Oikonomou, Orestis and Lingsch, Levi and Grund, Dana and Mishra, Siddhartha and Kissas, Georgios},
-  journal={arXiv preprint arXiv:2502.01476},
-  year={2025}
+export const bibtex = `@misc{oikonomou2026neurosymbolic,
+  title         = {Neuro-Symbolic {AI} for Analytical Solutions of Differential Equations},
+  author        = {Oikonomou, Orestis and Lingsch, Levi and Grund, Dana and Mishra, Siddhartha and Kissas, Georgios},
+  year          = {2026},
+  eprint        = {2502.01476},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  doi           = {10.48550/arXiv.2502.01476},
+  url           = {https://arxiv.org/abs/2502.01476}
 }`;
 
 // ── METHOD STEPS A–D ────────────────────────────────────────────────────────
