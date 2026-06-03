@@ -17,12 +17,13 @@ export const SITE = {
     "SIGS: grammar-constrained latent search that assembles, scores, and refines closed-form solutions by minimizing physics residuals.",
   noticeLine:
     "Interactive companion page (paper-style). Scroll for method → interactive results → citation.",
-  venue: " · ",
+  venue: "ICML 2026",
   links: {
     paperPdf: "/paper.pdf",
     arxiv: "https://arxiv.org/abs/2502.01476",
-    codeRepo: "#",
-    codeRepoLabel: "TBD after review",
+    codeRepo: "https://github.com/oroikono/SIGS",
+    codeRepoLabel: "Code",
+    video: "https://www.youtube.com/watch?v=a9MMvKVGhuQ",
   },
 };
 

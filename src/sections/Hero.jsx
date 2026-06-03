@@ -55,13 +55,19 @@ export default function Hero() {
         <a className="btn-primary" href={links.arxiv} target="_blank" rel="noreferrer">
           📄 arXiv
         </a>
-        <span className="btn-secondary" style={{ opacity: 0.6, cursor: "default" }}>
+        <a className="btn-secondary" href={links.codeRepo} target="_blank" rel="noreferrer">
           <GitHubIcon /> {links.codeRepoLabel || "Code"}
-        </span>
+        </a>
+        {links.video && (
+          <a className="btn-secondary" href={links.video} target="_blank" rel="noreferrer">
+            ▶ Video
+          </a>
+        )}
       </div>
 
       <div className="hero-quick-links">
         <a href={links.arxiv} target="_blank" rel="noreferrer">arXiv ↗</a>
+        {links.video && <a href={links.video} target="_blank" rel="noreferrer">Video ↗</a>}
         <a href="#abstract">Abstract</a>
         <a href="#method">Method</a>
         <a href="#results">Demo ↓</a>
