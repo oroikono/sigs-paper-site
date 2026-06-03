@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./styles.css";
+import "./styles-components.css";
 
 // Entry point for the SIGS interactive demo.
 ReactDOM.createRoot(document.getElementById("root")).render(
