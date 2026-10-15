@@ -1,6 +1,10 @@
-# Neuro-Symbolic AI for Analytical Solutions of Differential Equations
+# SIGS: Neuro-Symbolic AI for Analytical Solutions of Differential Equations
 
-Interactive project page for the **SIGS** paper. Built with Vite + React.
+This repository hosts the interactive companion website for **“Neuro-Symbolic AI for Analytical Solutions of Differential Equations”** by Orestis Oikonomou, Levi Lingsch, Dana Grund, Siddhartha Mishra, and Georgios Kissas (**ICML 2026**).
+
+SIGS combines grammar-guided symbolic search with physics-based coefficient refinement to search for closed-form differential-equation solutions. The website presents the method and benchmark examples; the implementation and reproduction instructions are maintained in the SIGS code repository.
+
+[Published paper](https://proceedings.mlr.press/v306/oikonomou26a.html) · [Project website](https://oroikono.github.io/sigs-paper-site/) · [Code](https://github.com/oroikono/SIGS) · [BibTeX](CITATION.bib)
 
 ## Quick start
 
@@ -13,39 +17,29 @@ Open [http://localhost:5173](http://localhost:5173).
 
 ---
 
-## Configuration (`src/site.config.js`)
+## Configuration
 
-All page content lives in a single file — `src/site.config.js`.
+Shared paper metadata, the abstract, and the published ICML BibTeX live in
+`src/paperMetadata.js`. The interactive sections import their content from
+`src/siteContent.js`; `src/site.config.js` retains a compatibility citation
+export. The Vite build also uses the shared metadata to put the title, authors,
+abstract, and paper/code links in the initial HTML.
 
-| Field | Description |
-|---|---|
-| `anonymous` | `true` → hide authors/logos (default, double-blind safe). `false` → show them. |
-| `title` | Paper title shown in hero. |
-| `tldr` | Array of 3 HTML strings for the TL;DR cards. |
-| `abstract` | Full abstract text (plain text, paragraphs separated by blank lines). |
-| `links.paper` | Path or URL to the paper PDF. |
-| `links.code` | GitHub repository URL. |
-| `authors` | List of `{ name, affil[] }` — shown only when `anonymous = false`. |
-| `affiliations` | List of `{ id, name }` — shown only when `anonymous = false`. |
-| `logos` | List of `{ src, alt, href }` logo images — shown only when `anonymous = false`. |
-| `bibtex` | BibTeX citation block string. |
-| `methodSteps` | 4-step (A–D) array driving the Method section stepper and mini-flow. |
+Keep `CITATION.bib` and the shared `BIBTEX` export consistent when updating the
+citation. The preferred reference is the published ICML 2026 paper; the arXiv
+link identifies the preprint.
 
-### Anonymous / public mode
+### Author display
 
-**Default is anonymous = true** (double-blind safe).
-
-Enable public mode at build or dev time:
+Public mode is the default. To hide the visible authors and logos:
 
 ```bash
-# Development
-VITE_ANON=false npm run dev
-
-# Production build
-VITE_ANON=false npm run build
+VITE_ANON=true npm run build
 ```
 
-Or set `anonymous: false` directly in `src/site.config.js`.
+Use `VITE_ANON=false` for explicit public mode. This setting controls display;
+the public site's bibliographic metadata and links still identify the paper,
+so it is not suitable for a blinded submission.
 
 ---
 
