@@ -1,6 +1,8 @@
+export { SITE, AUTHORS, ABSTRACT, BIBTEX } from "./paperMetadata.js";
+
 /**
- * siteContent.js — single source of truth for all text/data on the SIGS site.
- * Sections import from here.  Change content here; the page updates automatically.
+ * Interactive page content, with shared paper metadata re-exported above.
+ * Sections import from here; shared bibliographic fields live in paperMetadata.js.
  */
 
 // ── ANONYMOUS MODE ────────────────────────────────────────────────────────────
@@ -9,33 +11,7 @@ const _envAnon = import.meta.env.VITE_ANON;
 export const anonymous =
   _envAnon === undefined ? false : _envAnon !== "false";
 
-// ── SITE METADATA ─────────────────────────────────────────────────────────────
-export const SITE = {
-  title:
-    "Neuro-Symbolic AI for Analytical Solutions of Differential Equations",
-  subtitle:
-    "SIGS: grammar-constrained latent search that assembles, scores, and refines closed-form solutions by minimizing physics residuals.",
-  noticeLine:
-    "Interactive companion page (paper-style). Scroll for method → interactive results → citation.",
-  venue: "ICML 2026",
-  links: {
-    paperPdf: "/paper.pdf",
-    arxiv: "https://arxiv.org/abs/2502.01476",
-    icml: "https://icml.cc/virtual/2026/poster/63043",
-    codeRepo: "https://github.com/oroikono/SIGS",
-    codeRepoLabel: "Code",
-    video: "https://www.youtube.com/watch?v=a9MMvKVGhuQ",
-  },
-};
-
 // ── AUTHORS & AFFILIATIONS (public mode only) ─────────────────────────────────
-export const AUTHORS = [
-  { name: "Orestis Oikonomou", aff: [1, 2, 3], url: "https://ai.ethz.ch/about-us/people.html" },
-  { name: "Levi Lingsch", aff: [1, 2, 3], url: "https://scholar.google.com/citations?user=9pJIGJUAAAAJ" },
-  { name: "Dana Grund", aff: [1, 4], url: "https://camlab.ethz.ch/the-group/people.html" },
-  { name: "Siddhartha Mishra", aff: [1, 2], url: "https://math.ethz.ch/sam/the-institute/people/siddhartha-mishra.html" },
-  { name: "Georgios Kissas", aff: [5], url: "https://scholar.google.com/citations?user=gGvVfmAAAAAJ" },
-];
 
 export const AFFILIATIONS = {
   1: "Seminar for Applied Mathematics (SAM), D-MATH, ETH Zürich",
@@ -58,10 +34,6 @@ export const TLDR = [
   "We embed grammar-valid expressions into a continuous latent manifold (GVAE / Topological GVAE) to enable global-to-local search without enumerating symbolic trees.",
   "We discover solutions in two stages: latent structure search driven by PDE residuals, followed by gradient-based refinement of numerical constants to reach exact or high-precision solutions.",
 ];
-
-// ── ABSTRACT ──────────────────────────────────────────────────────────────────
-export const ABSTRACT =
-  "Analytical solutions to differential equations offer exact, interpretable insight but are rarely available because discovering them requires expert intuition or exhaustive search in combinatorial spaces. We introduce SIGS, a neuro-symbolic framework that automates this process. SIGS uses a formal grammar to generate only syntactically valid building blocks, embeds these expressions into a continuous space, and then searches this space to assemble, score, and refine candidate closed-form solutions by minimizing a physics-based residual. This design unifies symbolic reasoning with numerical optimization; the grammar constrains candidate solution blocks to be proper by construction, while the latent search makes exploration tractable and data-free. SIGS is the first neuro-symbolic method to (i) analytically solve coupled systems of nonlinear PDEs, (ii) discover solutions under grammar misspecification, and (iii) produce accurate symbolic approximations for PDEs lacking known closed-form solutions. Overall, SIGS achieves orders-of-magnitude improvements in accuracy and efficiency over existing symbolic methods on standard benchmarks.";
 
 // ── METHOD STEPS (4 steps; miniFlowStep indexes into MINI_FLOW) ───────────────
 // Fig 1 is a 2×2 grid: A=top-left (Grammar), B=bottom-left (Language),
@@ -206,10 +178,3 @@ export const RESULTS_HIGHLIGHTS = [
   "Orders-of-magnitude improvement over symbolic baselines across all benchmarks in both accuracy and wall-clock time.",
 ];
 
-// ── BIBTEX ────────────────────────────────────────────────────────────────────
-export const BIBTEX = `@article{oikonomou2025neuro,
-  title={Neuro-symbolic AI for analytical solutions of differential equations},
-  author={Oikonomou, Orestis and Lingsch, Levi and Grund, Dana and Mishra, Siddhartha and Kissas, Georgios},
-  journal={arXiv preprint arXiv:2502.01476},
-  year={2025}
-}`;

@@ -72,16 +72,7 @@ export const logos = [
 
 // ── BIBTEX ──────────────────────────────────────────────────────────────────
 
-export const bibtex = `@misc{oikonomou2026neurosymbolic,
-  title         = {Neuro-Symbolic {AI} for Analytical Solutions of Differential Equations},
-  author        = {Oikonomou, Orestis and Lingsch, Levi and Grund, Dana and Mishra, Siddhartha and Kissas, Georgios},
-  year          = {2026},
-  eprint        = {2502.01476},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.LG},
-  doi           = {10.48550/arXiv.2502.01476},
-  url           = {https://arxiv.org/abs/2502.01476}
-}`;
+export { BIBTEX as bibtex } from "./paperMetadata.js";
 
 // ── METHOD STEPS A–D ────────────────────────────────────────────────────────
 // Grounded in Figure 1 caption from the paper.
